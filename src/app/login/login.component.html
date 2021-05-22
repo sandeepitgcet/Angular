@@ -1,0 +1,27 @@
+<h1 style="text-align:center">Login Page</h1>
+<input type="checkbox" name="ss" [(ngModel)]="isVisible" >
+<div style="text-align: center;" >
+  <form #myForm="ngForm" (ngSubmit)="loginHandler(myForm.value)" *ngIf="isVisible==true">
+    <!-- <form #myForm="ngForm" (ngSubmit)="getValues(myForm.value)" *ngIf="isVisible==true"> -->
+    <label for="username">
+      <span>Username: </span>
+      <input type="text" [(ngModel)]="username" name="username">
+    </label>
+    
+    <br><br>
+    <label for="pass">
+      <span>Password: </span>
+      <input type="password" [(ngModel)]="password" name="pass">
+    </label>
+    <br><br>
+    
+    <button>Login</button> <br>
+    <span>{{responseMessage}}</span>
+  </form>
+  
+
+  <hr>
+  <br>
+  <span> Username  is : {{username}}</span><br>
+  <span>Password is : {{password}}</span>
+</div>
